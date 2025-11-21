@@ -1,19 +1,18 @@
-# rspack-repro
+# STR
 
-- [Rspack website](https://rspack.dev/)
-- [Rspack repo](https://github.com/web-infra-dev/rspack)
+1. `pnpm install`
+2. `pnpm dev`
+3. Open http://localhost:8080.
+4. Inspect the browser console
 
-A GitHub template for creating a Rspack minimal reproducible example.
+## Expected result:
 
-webpack is included for comparing the outputs.
+```
+ [webpack-dev-server] Server started: Hot Module Replacement disabled, Live Reloading enabled, Progress disabled, Overlay enabled.
+```
 
-## Usages
+## Actual result:
 
-`pnpm run build` would both run Rspack and webpack with config `./rspack.config.mjs`
-
-- Rspack will emits output in `./rspack-dist`
-- webpack will emits output in `./webpack-dist`
-
-`./webpack-dist` and `./rspack-dist` are purposely not added to `.gitignore`.
-
-It is recommended to commit these files so we quickly compare the outputs.
+```
+ [webpack-dev-server] Server started: Hot Module Replacement enabled, Live Reloading enabled, Progress disabled, Overlay enabled.
+```
